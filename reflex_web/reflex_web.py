@@ -1,5 +1,5 @@
 import reflex as rx
-from reflex_web.components.navbar import navbar
+from reflex_web.components import navbar,footer
 from reflex_web.views import header, links
 
 class State(rx.State):
@@ -10,6 +10,7 @@ def index() -> rx.component :
         navbar(),
         header(),
         links(),
+        footer(),
     )
     
 app = rx.App()
