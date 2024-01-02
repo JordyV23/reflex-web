@@ -1,5 +1,6 @@
 import reflex as rx
 from reflex_web.components import link_button,title
+from reflex_web.styles.styles import Size
 
 def links() -> rx.Component:
     return rx.vstack(
@@ -7,7 +8,7 @@ def links() -> rx.Component:
         link_button(
             "GitHub"
             ,"Echale un vistazo a mis repositorios"
-            ,"https://github.com/JordyV23"
+            ,"https://github.com/JordyV23?tab=repositories"
         ),
         link_button(
             "Twitter"
@@ -19,5 +20,6 @@ def links() -> rx.Component:
             ,"Que tal si conectamos? :)"
             ,"https://www.linkedin.com/in/jordy-jhv/"
         ),
-        width="100%"
+        width="100%",
+        spacing=Size.MEDIUM.value
     )
