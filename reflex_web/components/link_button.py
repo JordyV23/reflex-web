@@ -1,5 +1,5 @@
 import reflex as rx
-import reflex_web.styles.styles as styles
+from reflex_web.styles import Size,styles
 
 def link_button(title:str, body:str, url:str) -> rx.Component :
     return rx.link(
@@ -7,8 +7,9 @@ def link_button(title:str, body:str, url:str) -> rx.Component :
             rx.hstack(
                 rx.icon(
                     tag="arrow_forward",
-                    width=styles.Size.BIG.value,
-                    height=styles.Size.BIG.value,
+                    width= Size.BIG.value,
+                    height= Size.BIG.value,
+                    margin= Size.MEDIUM.value
                 ),
                 rx.vstack(
                     rx.text(title, 
@@ -17,7 +18,9 @@ def link_button(title:str, body:str, url:str) -> rx.Component :
                     ,rx.text(body, 
                         style=styles.button_body_style
                     ),
+                    spacing=Size.SMALL.value,
                     align_items="start",
+                    margin=Size.ZERO.value
                 ),
             )
         ),

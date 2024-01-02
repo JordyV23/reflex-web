@@ -22,7 +22,10 @@ def index() -> rx.component :
     )
     
 app = rx.App(
-    style = styles.BASE_STYLE
+    style = styles.BASE_STYLE,
+    stylesheets=[
+        "fonts/fonts.css"
+    ]
 )
 app.add_page(index)
 app.compile()
