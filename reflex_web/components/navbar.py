@@ -1,14 +1,15 @@
 import reflex as rx
-from reflex_web.styles.styles import Size
+from reflex_web.styles import Size,Color
 
 def navbar() -> rx.Component:
     return rx.hstack(
-        rx.text(
-            "Dev23",
+        rx.box(
+            rx.span("Dev",color=Color.SECONDARY.value),
+            rx.span("23",color=Color.PRIMARY.value),        
         ),
         position="sticky",
-        bg="lightgray",
-        padding_x= Size.DEFAULT.value,
+        bg=Color.CONTENT.value,
+        padding_x= Size.BIG.value,
         padding_y= Size.DEFAULT.value,
         z_index="999",
         top="0",

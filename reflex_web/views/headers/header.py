@@ -1,6 +1,7 @@
 import reflex as rx
 from reflex_web.components import link_icon, info_text
-from reflex_web.styles.styles import Size 
+from reflex_web.styles.styles import Size, TextColor
+from reflex_web.constants import GITHUB
 
 def header() -> rx.Component:
     return rx.vstack(
@@ -10,14 +11,15 @@ def header() -> rx.Component:
                 rx.heading(
                     "Hola!✌️ Me llamo Jordy Vargas!🐏",
                     size="md",
+                    color=TextColor.HEADER.value,
                 ),
                 rx.text(
                     "@Dev23",
-                    margin_top="0px !important"
+                    margin_top="0px !important",
+                    color=TextColor.BODY.value,
                 ),
                 rx.hstack(
-                    link_icon("https://github.com/JordyV23"),
-                    link_icon("https://github.com/JordyV23"),  
+                    link_icon(GITHUB),  
                 ),
                 align_items="start",
             ),
@@ -33,7 +35,10 @@ def header() -> rx.Component:
           info_text("Data","Science"),
           width="100%",
         ),
-        rx.text("Soy estudiante de ingeniería en tecnologías de la información, apasionado por la programación y ansioso por convertirme en un desarrollador full stack. Mi constante búsqueda de conocimiento me impulsa a aprender y crecer. ¡Bienvenido a mi viaje en el fascinante mundo de la programación!")
+        rx.text(
+            "Soy estudiante de ingeniería en tecnologías de la información, apasionado por la programación y ansioso por convertirme en un desarrollador full stack. Mi constante búsqueda de conocimiento me impulsa a aprender y crecer. ¡Bienvenido a mi viaje en el fascinante mundo de la programación!",
+            color=TextColor.BODY.value
+        )
         ,spacing=Size.BIG.value
         ,align_items="start"
     )
