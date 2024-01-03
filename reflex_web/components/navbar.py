@@ -8,7 +8,7 @@ def navbar() -> rx.Component:
             rx.span(
                 "23",
                 color=Color.PRIMARY.value,
-                background_image="linear-gradient(271.68deg, #EE756A 0.75%, #756AEE 88.52%)",
+                background_image="linear-gradient(271.68deg, #D92938 0.75%, #8C0839 88.52%)",
                 background_clip="text",
             ),
             style=navbar_style

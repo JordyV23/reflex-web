@@ -1,7 +1,7 @@
 import reflex as rx
 from reflex_web.components import link_button,title
 from reflex_web.styles.styles import Size
-from reflex_web.constants import TWITTER,LINKEDIN,REPOS
+import reflex_web.constants  as const
 
 def links() -> rx.Component:
     return rx.vstack(
@@ -9,17 +9,20 @@ def links() -> rx.Component:
         link_button(
             "GitHub"
             ,"Echale un vistazo a mis repositorios"
-            ,REPOS
+            ,const.REPOS
+            ,"github.svg"
         ),
         link_button(
             "Twitter"
             ,"Contactame por medio de Redes Sociales"
-            ,TWITTER
+            ,const.TWITTER
+            ,"x.svg"
         ),
         link_button(
             "LinkedIn"
             ,"Que tal si conectamos? :)"
-            ,LINKEDIN
+            ,const.LINKEDIN
+            ,"linkedin.svg"
         ),
         width="100%",
         spacing=Size.MEDIUM.value

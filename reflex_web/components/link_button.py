@@ -1,15 +1,16 @@
 import reflex as rx
-from reflex_web.styles import Size,styles
+from reflex_web.styles import Size,styles,Color
 
-def link_button(title:str, body:str, url:str) -> rx.Component :
+def link_button(title:str, body:str, url:str, img:str) -> rx.Component :
     return rx.link(
         rx.button(
             rx.hstack(
-                rx.icon(
-                    tag="arrow_forward",
+                rx.image(
+                    src= "icons/" + img,
                     width= Size.BIG.value,
                     height= Size.BIG.value,
-                    margin= Size.MEDIUM.value
+                    margin= Size.MEDIUM.value,
+                    color= Color.PRIMARY.value,
                 ),
                 rx.vstack(
                     rx.text(title, 

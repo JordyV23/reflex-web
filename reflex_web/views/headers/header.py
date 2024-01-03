@@ -1,12 +1,20 @@
 import reflex as rx
 from reflex_web.components import link_icon, info_text
-from reflex_web.styles.styles import Size, TextColor
+from reflex_web.styles.styles import Size, TextColor, Color
 from reflex_web.constants import GITHUB
 
 def header() -> rx.Component:
     return rx.vstack(
         rx.hstack(
-            rx.avatar(name="Jordy Vargas", size="xl"),
+            rx.avatar(
+                name="Jordy Vargas", 
+                size="xl",
+                color=TextColor.HEADER.value,
+                src="profile.png",
+                bg=Color.CONTENT.value,
+                border="4px",
+                border_color=Color.PRIMARY.value
+            ),
             rx.vstack(
                 rx.heading(
                     "Hola!✌️ Me llamo Jordy Vargas!🐏",
@@ -19,7 +27,7 @@ def header() -> rx.Component:
                     color=TextColor.BODY.value,
                 ),
                 rx.hstack(
-                    link_icon(GITHUB),  
+                    link_icon(GITHUB,"github.svg"),  
                 ),
                 align_items="start",
             ),

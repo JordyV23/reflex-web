@@ -27,5 +27,9 @@ app = rx.App(
         "fonts/fonts.css"
     ]
 )
-app.add_page(index)
+app.add_page(
+    index,
+    title="Dev23 | FullStack developer",
+    description="Hola, mi nombre es Jordy Vargas, desarrollador FullStack e ingeniero en tecnologías de la información",
+)
 app.compile()
