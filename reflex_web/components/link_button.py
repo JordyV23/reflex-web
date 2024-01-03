@@ -21,8 +21,10 @@ def link_button(title:str, body:str, url:str, img:str) -> rx.Component :
                     ),
                     spacing=Size.SMALL.value,
                     align_items="start",
-                    margin=Size.ZERO.value
+                    padding_y=Size.SMALL.value,
+                    padding_right=Size.SMALL.value,
                 ),
+                width = "100%",
             )
         ),
         href=url,

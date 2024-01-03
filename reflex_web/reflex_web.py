@@ -16,6 +16,7 @@ def index() -> rx.component :
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 margin_y=styles.Size.BIG.value,
+                padding=styles.Size.BIG.value
             ),
         ),
         footer(),
@@ -31,5 +32,6 @@ app.add_page(
     index,
     title="Dev23 | FullStack developer",
     description="Hola, mi nombre es Jordy Vargas, desarrollador FullStack e ingeniero en tecnologías de la información",
+    image="/profile.png",
 )
 app.compile()

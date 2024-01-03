@@ -44,7 +44,11 @@ def header() -> rx.Component:
           width="100%",
         ),
         rx.text(
-            "Soy estudiante de ingeniería en tecnologías de la información, apasionado por la programación y ansioso por convertirme en un desarrollador full stack. Mi constante búsqueda de conocimiento me impulsa a aprender y crecer. ¡Bienvenido a mi viaje en el fascinante mundo de la programación!",
+            "¡Bienvenido a mi viaje en el fascinante mundo de la programación!",
+            color=TextColor.BODY.value
+        ),
+        rx.text(
+            "Soy estudiante de ingeniería en tecnologías de la información, apasionado por la programación y ansioso por convertirme en un desarrollador full stack. Mi constante búsqueda de conocimiento me impulsa a aprender y crecer.",
             color=TextColor.BODY.value
         )
         ,spacing=Size.BIG.value
