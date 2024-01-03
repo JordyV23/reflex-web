@@ -3,8 +3,8 @@ from reflex_web.components import navbar,footer
 from reflex_web.views import header, links
 from reflex_web.styles import styles
 
-class State(rx.State):
-    pass
+# class State(rx.State):
+#     pass
 
 def index() -> rx.component :
     return rx.box(
